@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        app:titleTextColor="@android:color/white"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        >
+    </android.support.v7.widget.Toolbar>
+
+    <!-- Layout for content is here. This can be a RelativeLayout  -->
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:text="Benvenuto da Sit'n'Eat!"
+            android:textColor="#000000"
+            android:textSize="32dp"
+            android:textAlignment="center"
+
+            />
+    
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="192dp" />
+
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="192dp"
+            android:layout_height="wrap_content"
+            android:background="#AF0000"
+            android:onClick="orderButton"
+            android:text="@string/ordina"
+            android:textColor="#FFFFFF" />
+    
+</LinearLayout>
+
+

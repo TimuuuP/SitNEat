@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ium.sitneat.TabFragment1"
+    android:baselineAligned="false">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:background="@drawable/round_corner">
+
+        <TextView
+            android:id="@+id/ordTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:text="@string/panino"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textAlignment="center"/>
+
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/bun1"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_below="@id/ordTitle"
+            android:layout_marginTop="@dimen/fab_margin"
+            />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/sauce"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_below="@id/bun1"
+            />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/bun2"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_below="@id/sauce"
+            />
+
+        <TextView
+            android:id="@+id/ingr1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bun2"
+            android:padding="@dimen/fab_margin"
+            android:text="Ingrediente: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+
+
+    </RelativeLayout>
+
+    <!--
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.40"
+        android:padding="8dp"
+        android:background="@drawable/round_corner">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="2dp"
+            android:text="@string/totale"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textAlignment="center"/>
+
+    </LinearLayout> -->
+
+    <!--
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:text="@string/panino"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textAlignment="center"/> -->
+
+</LinearLayout>

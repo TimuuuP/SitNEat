@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Sit\'n\'Eat</string>
+    <string name="ordina">Ordina</string>
+    <string name="procedi">Procedi</string>
+    <string name="conferma">Conferma</string>
+    <string name="title_activity_order_screen">OrderScreen</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="patatine_e_bibite">Patatine e Bibite</string>
+    <string name="panino">Pagina Panino</string>
+    <string name="tabLabel1">Panino</string>
+    <string name="tabLabel2">Patatine e Bibite</string>
+    <string name="totale">Totale</string>
+    <string name="bibite">Bibite</string>
+</resources>
