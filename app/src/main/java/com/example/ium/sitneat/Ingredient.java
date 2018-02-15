@@ -1,17 +1,15 @@
 package com.example.ium.sitneat;
 
-/**
- * Created by Simone on 08/02/18.
- */
-
 public class Ingredient {
 
     public String name;
+    private String category;
     public float price;
     public Integer img;
 
-    public Ingredient(String n, float p, Integer i){
+    public Ingredient(String n, String c, float p, Integer i){
         this.name=n;
+        this.category=c;
         this.price=p;
         this.img=i;
     }
@@ -39,4 +37,8 @@ public class Ingredient {
     public void setImg(Integer img) {
         this.img = img;
     }
+
+    public String getCategory() { return category; }
+
+    public void setCategory(String category) { this.category = category; }
 }

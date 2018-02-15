@@ -31,6 +31,7 @@ public class OrderScreen extends AppCompatActivity {
         // Using PagerAdapter to manage page views in fragments.
         // Each page is represented by its own fragment.
         // This is another example of the adapter pattern.
+
         //final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
         final PagerAdapter adapter = new PagerAdapter
                 (getSupportFragmentManager(), tabLayout.getTabCount());

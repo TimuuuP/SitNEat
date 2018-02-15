@@ -20,6 +20,7 @@ public class TabFragment1 extends android.support.v4.app.Fragment {
     ViewPager viewPager1;
     ViewPager viewPager2;
     ViewPager viewPager3;
+    ViewPager viewPager4;
     int currPosition=0;
 
     public TabFragment1() {
@@ -34,18 +35,27 @@ public class TabFragment1 extends android.support.v4.app.Fragment {
         View view = inflater.inflate(R.layout.tab_fragment1, container, false);
 
         viewPager1 = (ViewPager) view.findViewById(R.id.bun1);
-        viewPager2 = (ViewPager) view.findViewById(R.id.sauce);
-        viewPager3 = (ViewPager) view.findViewById(R.id.bun2);
+        viewPager2 = (ViewPager) view.findViewById(R.id.meat);
+        viewPager3 = (ViewPager) view.findViewById(R.id.adds);
+        viewPager4 = (ViewPager) view.findViewById(R.id.bun2);
 
-        final ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getActivity());
+        final ViewPagerAdapter viewPagerAdapter1 = new ViewPagerAdapter(getActivity());
+        final ViewPagerAdapter viewPagerAdapter2 = new ViewPagerAdapter(getActivity());
+        final ViewPagerAdapter viewPagerAdapter3 = new ViewPagerAdapter(getActivity());
+        final ViewPagerAdapter viewPagerAdapter4 = new ViewPagerAdapter(getActivity());
 
-        viewPager1.setAdapter(viewPagerAdapter);
-        viewPager2.setAdapter(viewPagerAdapter);
-        viewPager3.setAdapter(viewPagerAdapter);
+        viewPager1.setAdapter(setCategory(viewPagerAdapter1, "BreadTop", 2));
+        viewPager2.setAdapter(setCategory(viewPagerAdapter2, "Meat", 3));
+        viewPager3.setAdapter(setCategory(viewPagerAdapter3, "Adds", 9));
+        viewPager4.setAdapter(setCategory(viewPagerAdapter4, "BreadBot", 2));
+
+
 
         final TextView tv = (TextView) view.findViewById(R.id.ingr1);
 
-        viewPager2.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+
+
+        viewPager1.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
@@ -53,10 +63,11 @@ public class TabFragment1 extends android.support.v4.app.Fragment {
 
             @Override
             public void onPageSelected(int position) {
-                Toast.makeText(getActivity(), "Nome:" + viewPager2.getId() , Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getActivity(), "Nome:" + viewPager2.getId() , Toast.LENGTH_SHORT).show();
                 currPosition = position;
-                String currImgName = viewPagerAdapter.ingredients[currPosition].name;
-                tv.setText("Ingrediente" +  currImgName);
+                //viewPager4.setCurrentItem(position);
+                String currImgName = viewPagerAdapter1.ingredients[currPosition].name;
+                tv.setText("Ingrediente: " +  currImgName);
             }
 
             @Override
@@ -68,4 +79,21 @@ public class TabFragment1 extends android.support.v4.app.Fragment {
         return view;
     }
 
+    public ViewPagerAdapter setCategory(ViewPagerAdapter v1, String cate, int n) {
+
+        Ingredient [] ingredients = new Ingredient[n];
+        ViewPagerAdapter nv1 = v1;
+        int i = 0;
+        for (Ingredient ing : v1.ingredients) {
+            if (ing.getCategory().equals(cate))
+            {
+                ingredients[i] = ing;
+                i++;
+            }
+        }
+
+        nv1.ingredients = ingredients;
+
+        return nv1;
+    }
 }

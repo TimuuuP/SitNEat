@@ -21,44 +21,135 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textAlignment="center"/>
 
+    <RelativeLayout
+        android:id="@+id/layoutBun1"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_below="@id/ordTitle"
+        android:layout_marginTop="@dimen/fab_margin">
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_chevron_left_black_24dp"
+            android:layout_alignParentLeft="true"
+            />
 
-        <android.support.v4.view.ViewPager
-            android:id="@+id/bun1"
-            android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:layout_below="@id/ordTitle"
-            android:layout_marginTop="@dimen/fab_margin"
+            <android.support.v4.view.ViewPager
+                android:id="@+id/bun1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_chevron_right_black_24dp"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutMeat"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_below="@id/layoutBun1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_chevron_left_black_24dp"
+            android:layout_alignParentLeft="true"
             />
 
         <android.support.v4.view.ViewPager
-            android:id="@+id/sauce"
+            android:id="@+id/meat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_chevron_right_black_24dp"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutAdds"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_below="@id/layoutMeat">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_chevron_left_black_24dp"
+            android:layout_alignParentLeft="true"
+            />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/adds"
             android:layout_width="match_parent"
             android:layout_height="64dp"
-            android:layout_below="@id/bun1"
+            android:layout_centerInParent="true"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_chevron_right_black_24dp"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutBun2"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_below="@id/layoutAdds">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_chevron_left_black_24dp"
+            android:layout_alignParentLeft="true"
             />
 
         <android.support.v4.view.ViewPager
             android:id="@+id/bun2"
             android:layout_width="match_parent"
             android:layout_height="64dp"
-            android:layout_below="@id/sauce"
+            android:layout_centerInParent="true"
             />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_chevron_right_black_24dp"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
 
         <TextView
             android:id="@+id/ingr1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/bun2"
+            android:layout_below="@id/layoutBun2"
             android:padding="@dimen/fab_margin"
             android:text="Ingrediente: "
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
 
-
-
     </RelativeLayout>
 
-    <!--
+    <!-- Layout colonna a destra - non cancellare
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"

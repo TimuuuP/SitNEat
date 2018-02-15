@@ -20,9 +20,6 @@
         >
     </android.support.v7.widget.Toolbar>
 
-    <!-- Layout for content is here. This can be a RelativeLayout  -->
-
-
     <Space
         android:layout_width="match_parent"
         android:layout_height="16dp" />
