@@ -13,7 +13,7 @@ public class ViewPagerAdapter extends PagerAdapter{
     private Context context;
     private LayoutInflater layoutInflater;
     public Ingredient [] ingredients = new Ingredient[16];
-    //private Integer [] images =  {R.drawable.top_bun, R.drawable.ham1, R.drawable.bot_bun};
+    private Integer [] images =  {R.drawable.top_bun, R.drawable.ham1, R.drawable.bot_bun};
 
     public ViewPagerAdapter(Context context) {
         this.context = context;
