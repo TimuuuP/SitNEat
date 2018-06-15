@@ -21,8 +21,8 @@
             android:label="@string/app_name" />
         <activity
             android:name=".OrderScreen"
-            android:label="@string/app_name"
-            ></activity>
+            android:label="@string/app_name" />
+        <activity android:name=".button_info"></activity>
     </application>
 
 </manifest>
